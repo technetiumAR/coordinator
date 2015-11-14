@@ -47,6 +47,7 @@ xbeeAPI.on("frame_object", function (frame) {
       break;
     }
 
+    console.log(JSON.stringify(measuresJSON));
     //Enviamos el frame JSON al Broker MQTT
     client.publish(mqttTopic, JSON.stringify(measuresJSON));
 
