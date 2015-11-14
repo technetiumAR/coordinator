@@ -4,7 +4,7 @@ var SerialPort = require('serialport').SerialPort;
 var xbee_api = require('xbee-api');
 
 //Importamos las funciones para procesar los datos de los sensores
-var parkingSensor = require ('parkingSensor.js');
+var parkingSensor = require ('./parkingSensor.js');
 
 //Broker MQTT de Hernan
 var PORT = 10000;
