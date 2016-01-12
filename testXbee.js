@@ -17,15 +17,23 @@ var frame_obj =
 {
   type: 0x17, // xbee_api.constants.FRAME_TYPE.REMOTE_AT_COMMAND_REQUEST
   //id: 0x01, // optional, nextFrameId() is called per default
-  destination64: "0013a2004066b84b",
+  destination64: "0013a2004066b84a",
   //destination16: "fffe", // optional, "fffe" is default
   remoteCommandOptions: 0x02, // optional, 0x02 is default
-  command: "IS",
+  command: "OP",
   commandParameter: [] // Can either be string or byte array.
 }
 
+var frame_test =
+{
+    type: 0x08,
+    id: 0x52,
+    command: "ID",
+    commandParameter: [],
+}
+
 serialport.on("open", function () {
-    //serialport.write(xbeeAPI.buildFrame(frame_obj));
+    serialport.write(xbeeAPI.buildFrame(frame_test));
     console.log('Sent to serial port.');
 });
 
