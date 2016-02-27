@@ -7,8 +7,15 @@ var xbee_api = require('xbee-api');
 var parkingSensor = require ('./parkingSensor.js');
 
 //Broker MQTT de Hernan
+/*
 var PORT = 10000;
 var HOST = 'dev.e-mozart.com';
+*/
+//Broker MQTT Mosquitto
+var PORT = 1883;
+var HOST = 'test.mosquitto.org';
+
+//Connect to MQTT server
 var server = {port:PORT, host:HOST};
 var client = mqtt.connect(server);
 

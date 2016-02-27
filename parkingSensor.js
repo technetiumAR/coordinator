@@ -16,7 +16,7 @@ module.exports = {
        {
          "zigbeeId" : remoteZigbeeId,
          "measuresType" : "100.Parking",
-         "timestamp" : new Date().toString(),
+         "timestamp" : new Date(),
          "measures" :
          {
            "magnetic" :
